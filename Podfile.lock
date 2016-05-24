@@ -1,0 +1,10 @@
+PODS:
+  - XcodeEditor (1.6.4)
+
+DEPENDENCIES:
+  - XcodeEditor
+
+SPEC CHECKSUMS:
+  XcodeEditor: c6a79b32b89c86c793d15049a49e96dfd0749351
+
+COCOAPODS: 0.39.0

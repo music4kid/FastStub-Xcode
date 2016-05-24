@@ -1,0 +1,22 @@
+//
+//  FSActionSheetDelegate.h
+//  FastStub
+//
+//  Created by gao feng on 16/5/17.
+//  Copyright © 2016年 music4kid. All rights reserved.
+//
+
+@protocol UIActionSheetDelegate <NSObject>
+@optional
+
+// Called when a button is clicked. The view will be automatically dismissed after this call returns
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
+- (void)actionSheetCancel:(UIActionSheet *)actionSheet;
+
+- (void)willPresentActionSheet:(UIActionSheet *)actionSheet;
+- (void)didPresentActionSheet:(UIActionSheet *)actionSheet;
+
+- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex;
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex;
+
+@end

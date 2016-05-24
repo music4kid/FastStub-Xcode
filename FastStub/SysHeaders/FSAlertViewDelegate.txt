@@ -1,0 +1,24 @@
+//
+//  FSActionSheetDelegate.h
+//  FastStub
+//
+//  Created by gao feng on 16/5/17.
+//  Copyright © 2016年 music4kid. All rights reserved.
+//
+
+@protocol UIAlertViewDelegate
+@optional
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
+
+- (void)alertViewCancel:(UIAlertView *)alertView;
+
+- (void)willPresentAlertView:(UIAlertView *)alertView;
+- (void)didPresentAlertView:(UIAlertView *)alertView;
+
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex;
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
+
+- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView;
+
+@end

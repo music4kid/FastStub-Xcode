@@ -1,0 +1,41 @@
+//
+//  FSTableView.h
+//  FastStub
+//
+//  Created by gao feng on 16/5/17.
+//  Copyright © 2016年 music4kid. All rights reserved.
+//
+
+@protocol UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section;
+ 
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;
+- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section;
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
+
+@protocol UITableViewDataSource<NSObject>
+
+@required
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+@optional
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;
+- (nullable NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section;
+
+@end
+
+
+
+
+
