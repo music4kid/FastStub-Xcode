@@ -20,10 +20,6 @@
 @property (nonatomic, strong) NSMapTable*                           projectsByWorkspace;
 @property (nonatomic, strong) FSIDESourceEditor*                    editor;
 @property (nonatomic, assign) BOOL                                  loading;
-
-
-@property (nonatomic, strong) NSMutableArray*                       customSuperClasses;
-@property (nonatomic, strong) NSMutableArray*                       customProtocols;
 @end
 
 
@@ -276,6 +272,9 @@
         NSString* mpart = kExtenionImp;
         mpart = [mpart stringByReplacingOccurrencesOfString:@"FSPlaceHolder" withString:impElement.elementName];
         [_editor insertText:mpart withRange:elementRange];
+        
+        impElement = [_editor getCurrentElement];
+        [_editor setSelectedRange:NSMakeRange(impElement.elementBeginRange.location-7, 0)];
     }
     
     

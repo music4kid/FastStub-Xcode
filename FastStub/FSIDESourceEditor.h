@@ -21,6 +21,7 @@
 - (void)insertText:(NSString*)text withRange:(NSRange)range;
 - (void)insertText:(NSString*)text withRange:(NSRange)range withFilePath:(NSString*)filePath;
 
+- (void)setSelectedRange:(NSRange)range;
 - (void)offsetSelectedRange:(int)offset;
 - (void)insertMethodImp:(NSString*)method;
 - (void)saveCodeChanges;

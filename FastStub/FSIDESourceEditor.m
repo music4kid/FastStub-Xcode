@@ -106,6 +106,12 @@
     return [MHXcodeDocumentNavigator currentSourceCodeTextView];
 }
 
+- (void)setSelectedRange:(NSRange)range
+{
+    NSTextView *textView = [MHXcodeDocumentNavigator currentSourceCodeTextView];
+    [textView setSelectedRange:range];
+}
+
 - (void)offsetSelectedRange:(int)offset
 {
     NSTextView *textView = [MHXcodeDocumentNavigator currentSourceCodeTextView];

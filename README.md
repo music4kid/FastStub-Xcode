@@ -1,2 +1,33 @@
 # FastStub-Xcode
-Xcode Plugin helps you find missing methods in your class header, protocols, and super class, also makes fast inserting.
+
+### What is it?
+**A code generating feature borrowed from Android Studio.**
+
+FastStub automatically finds out missing method implementaions from .h file, super class, and all procotols your class uses, also provides you a fast way to insert them.
+
+<img src="http://mrpeak.cn/images/fs_header.gif" width="480">
+
+common protocols like UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate are supported. What's your favourite way to put on some tableview's boilerplate code? anything like this?
+
+<img src="http://mrpeak.cn/images/fs_delegate.gif" width="480">
+
+### Superduper way to write singleton
+
+<img src="http://mrpeak.cn/images/fs_singleton.gif" width="480">
+
+### Sweet on interface extension
+
+<img src="http://mrpeak.cn/images/fs_extension.gif" width="480">
+
+### How to use?
+
+press ctrl+cmd+k, you are ready to go.
+
+### How to install?
+
+plan A: install [Alcatraz](http://alcatraz.io), search for FastStub next.
+
+plan B: clone this repo, build FastStub on your Mac.
+
+### License
+MIT

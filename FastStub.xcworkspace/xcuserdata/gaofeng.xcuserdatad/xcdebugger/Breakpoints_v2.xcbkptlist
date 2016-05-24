@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FastStub/FastStubInspector.m"
-            timestampString = "485594050.81154"
+            timestampString = "485755359.280104"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "-showSuggestion"
             landmarkType = "5">
          </BreakpointContent>
