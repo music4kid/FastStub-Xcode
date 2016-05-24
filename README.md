@@ -5,19 +5,19 @@
 
 FastStub automatically finds out missing method implementaions from .h file, super class, and all procotols your class uses, also provides you a fast way to insert them.
 
-<img src="http://mrpeak.cn/images/fs_header.gif" width="640">
+<img src="http://mrpeak.cn/images/fs_header.gif" width="920">
 
 common protocols like UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate are supported. What's your favourite way to put on some tableview's boilerplate code? anything like this?
 
-<img src="http://mrpeak.cn/images/fs_delegate.gif" width="640">
+<img src="http://mrpeak.cn/images/fs_delegate.gif" width="920">
 
 ### Superduper way to write singleton
 
-<img src="http://mrpeak.cn/images/fs_singleton.gif" width="640">
+<img src="http://mrpeak.cn/images/fs_singleton.gif" width="920">
 
 ### Sweet on interface extension
 
-<img src="http://mrpeak.cn/images/fs_extension.gif" width="640">
+<img src="http://mrpeak.cn/images/fs_extension.gif" width="920">
 
 ### How to use?
 
