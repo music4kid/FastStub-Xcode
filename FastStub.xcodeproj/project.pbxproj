@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		9666E4D5196BCB2B0076C1F2 /* FastStub */ = {
+		67AB58C71CF5F65E00FFA48E /* FastStub */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 9666E4D8196BCB2B0076C1F2 /* Build configuration list for PBXAggregateTarget "FastStub" */;
+			buildConfigurationList = 67AB58C91CF5F65E00FFA48E /* Build configuration list for PBXAggregateTarget "FastStub" */;
 			buildPhases = (
-				9666E4D9196BCB4E0076C1F2 /* ShellScript */,
+				67AB58C81CF5F65E00FFA48E /* ShellScript */,
 			);
 			dependencies = (
 			);
 			name = FastStub;
-			productName = "Auto-Importer";
+			productName = FastStub;
 		};
 /* End PBXAggregateTarget section */
 
@@ -46,13 +46,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9666E4D5196BCB2B0076C1F2 /* FastStub */,
+				67AB58C71CF5F65E00FFA48E /* FastStub */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9666E4D9196BCB4E0076C1F2 /* ShellScript */ = {
+		67AB58C81CF5F65E00FFA48E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -68,6 +68,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		67AB58CA1CF5F65E00FFA48E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		67AB58CB1CF5F65E00FFA48E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		9666E4D3196BCAB40076C1F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -81,37 +95,23 @@
 			};
 			name = Release;
 		};
-		9666E4D6196BCB2B0076C1F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		9666E4D7196BCB2B0076C1F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		67AB58C91CF5F65E00FFA48E /* Build configuration list for PBXAggregateTarget "FastStub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67AB58CA1CF5F65E00FFA48E /* Debug */,
+				67AB58CB1CF5F65E00FFA48E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9666E4D2196BCAB40076C1F2 /* Build configuration list for PBXProject "FastStub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9666E4D3196BCAB40076C1F2 /* Debug */,
 				9666E4D4196BCAB40076C1F2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9666E4D8196BCB2B0076C1F2 /* Build configuration list for PBXAggregateTarget "FastStub" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9666E4D6196BCB2B0076C1F2 /* Debug */,
-				9666E4D7196BCB2B0076C1F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
