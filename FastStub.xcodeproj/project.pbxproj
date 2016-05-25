@@ -6,697 +6,117 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		10DB192B614EB53331FC58EC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFCFA75F725F66B6332B8D9 /* libPods.a */; };
-		67009C741CF1793E00220AE3 /* FSScrollView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 67009C731CF1793E00220AE3 /* FSScrollView.txt */; };
-		672714971CE996E7002A9233 /* FSIDENotificationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 672714961CE996E7002A9233 /* FSIDENotificationHandler.m */; };
-		6727149A1CE9985A002A9233 /* FastStubInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 672714991CE9985A002A9233 /* FastStubInspector.m */; };
-		672714A41CE9A017002A9233 /* FSProtocolProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 672714A31CE9A017002A9233 /* FSProtocolProcessor.m */; };
-		672714A71CE9A04F002A9233 /* FSElementProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 672714A61CE9A04F002A9233 /* FSElementProcessor.m */; };
-		672714AA1CE9EE8C002A9233 /* FSSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 672714A91CE9EE8C002A9233 /* FSSuggestion.m */; };
-		672714AD1CE9F1AB002A9233 /* FSElementCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 672714AC1CE9F1AB002A9233 /* FSElementCache.m */; };
-		672714B01CE9F368002A9233 /* FSImpProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 672714AF1CE9F368002A9233 /* FSImpProcessor.m */; };
-		672714B81CEA19AD002A9233 /* FSSuggestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 672714B71CEA19AD002A9233 /* FSSuggestionView.xib */; };
-		6727154B1CEACE8F002A9233 /* FSElementPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6727154A1CEACE8F002A9233 /* FSElementPool.m */; };
-		672715541CEAE21A002A9233 /* FSTableView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6727154D1CEAD9EB002A9233 /* FSTableView.txt */; };
-		672715551CEAE21A002A9233 /* FSTextView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6727154E1CEAD9F6002A9233 /* FSTextView.txt */; };
-		6727155C1CEAEF5A002A9233 /* FSSuggestionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6727155B1CEAEF5A002A9233 /* FSSuggestionController.m */; };
-		672715601CEAF00D002A9233 /* FSSuggestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6727155F1CEAF00D002A9233 /* FSSuggestionView.m */; };
-		672715661CEB0BAF002A9233 /* FSSuggestionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 672715651CEB0BAF002A9233 /* FSSuggestionCellModel.m */; };
-		6769CFEA1CEEDFC000B0AC20 /* FSSuggestionStubTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6769CFE91CEEDFC000B0AC20 /* FSSuggestionStubTableView.m */; };
-		676AD51B1CEC5AEB00CC2500 /* FSSuggestionStubController.m in Sources */ = {isa = PBXBuildFile; fileRef = 676AD51A1CEC5AEB00CC2500 /* FSSuggestionStubController.m */; };
-		676AD51E1CEC5B3100CC2500 /* FSSuggestionStubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 676AD51D1CEC5B3100CC2500 /* FSSuggestionStubView.m */; };
-		676AD5201CEC5B4D00CC2500 /* FSSuggestionStubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 676AD51F1CEC5B4D00CC2500 /* FSSuggestionStubView.xib */; };
-		676AD5241CECA52300CC2500 /* FSExtensionProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 676AD5231CECA52300CC2500 /* FSExtensionProcessor.m */; };
-		676AD5351CEDC35900CC2500 /* NSString+PDRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 676AD5341CEDC35900CC2500 /* NSString+PDRegex.m */; };
-		676AD5381CEEB05200CC2500 /* FSInterfaceProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 676AD5371CEEB05200CC2500 /* FSInterfaceProcessor.m */; };
-		676E6A941CDDB8C9007F65B2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676E6A931CDDB8C9007F65B2 /* AppKit.framework */; };
-		676E6A961CDDB8C9007F65B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676E6A951CDDB8C9007F65B2 /* Foundation.framework */; };
-		676E6A9A1CDDB8C9007F65B2 /* FastStub.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 676E6A991CDDB8C9007F65B2 /* FastStub.xcscheme */; };
-		676E6A9D1CDDB8C9007F65B2 /* FastStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 676E6A9C1CDDB8C9007F65B2 /* FastStub.m */; };
-		676E6AA01CDDB8C9007F65B2 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 676E6A9F1CDDB8C9007F65B2 /* NSObject_Extension.m */; };
-		67A4A6CB1CF3FE7D005334CD /* FSActionSheetDelegate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 67A4A6CA1CF3FE7D005334CD /* FSActionSheetDelegate.txt */; };
-		67A4A6CD1CF3FF60005334CD /* FSAlertViewDelegate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 67A4A6CC1CF3FF60005334CD /* FSAlertViewDelegate.txt */; };
-		67DCA2F21CE9610B00A54B7A /* DVTSourceTextStorage+Operations.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2DD1CE9610B00A54B7A /* DVTSourceTextStorage+Operations.m */; };
-		67DCA2F31CE9610B00A54B7A /* NSArray+Operations.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2DF1CE9610B00A54B7A /* NSArray+Operations.m */; };
-		67DCA2F41CE9610B00A54B7A /* NSFileManager+Headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2E11CE9610B00A54B7A /* NSFileManager+Headers.m */; };
-		67DCA2F51CE9610B00A54B7A /* NSMutableIndexSet+NSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2E31CE9610B00A54B7A /* NSMutableIndexSet+NSArray.m */; };
-		67DCA2F61CE9610B00A54B7A /* NSObject+MHLogMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2E51CE9610B00A54B7A /* NSObject+MHLogMethods.m */; };
-		67DCA2F71CE9610B00A54B7A /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2E71CE9610B00A54B7A /* NSString+Extensions.m */; };
-		67DCA2F81CE9610B00A54B7A /* NSString+Files.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2E91CE9610B00A54B7A /* NSString+Files.m */; };
-		67DCA2F91CE9610B00A54B7A /* NSString+MHNSRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2EB1CE9610B00A54B7A /* NSString+MHNSRange.m */; };
-		67DCA2FA1CE9610B00A54B7A /* NSTextView+Operations.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2ED1CE9610B00A54B7A /* NSTextView+Operations.m */; };
-		67DCA2FB1CE9610B00A54B7A /* NSView+Dumping.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2EF1CE9610B00A54B7A /* NSView+Dumping.m */; };
-		67DCA2FC1CE9610B00A54B7A /* XCSourceFile+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2F11CE9610B00A54B7A /* XCSourceFile+Path.m */; };
-		67DCA3111CE962AE00A54B7A /* MHXcodeDocumentNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA3031CE962AE00A54B7A /* MHXcodeDocumentNavigator.m */; };
-		67DCA3121CE962AE00A54B7A /* NSString+XCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA3081CE962AE00A54B7A /* NSString+XCAdditions.m */; };
-		67DCA3131CE962AE00A54B7A /* XCProject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA30A1CE962AE00A54B7A /* XCProject+Extensions.m */; };
-		67DCA3141CE962AE00A54B7A /* XCTarget+XCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA30C1CE962AE00A54B7A /* XCTarget+XCProject.m */; };
-		67DCA3151CE962AE00A54B7A /* XCBuildSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA30E1CE962AE00A54B7A /* XCBuildSettings.m */; };
-		67DCA3161CE962AE00A54B7A /* XCWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA3101CE962AE00A54B7A /* XCWorkspace.m */; };
-		67DCA3191CE9638200A54B7A /* libXcodeEditor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DCA3181CE9638200A54B7A /* libXcodeEditor.a */; };
-		67DCA31C1CE9652400A54B7A /* FSIDESourceEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA31B1CE9652400A54B7A /* FSIDESourceEditor.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		3E7B236439DB4EBF4E853A80 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		67009C731CF1793E00220AE3 /* FSScrollView.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FSScrollView.txt; sourceTree = "<group>"; };
-		672714951CE996E7002A9233 /* FSIDENotificationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSIDENotificationHandler.h; sourceTree = "<group>"; };
-		672714961CE996E7002A9233 /* FSIDENotificationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSIDENotificationHandler.m; sourceTree = "<group>"; };
-		672714981CE9985A002A9233 /* FastStubInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastStubInspector.h; sourceTree = "<group>"; };
-		672714991CE9985A002A9233 /* FastStubInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastStubInspector.m; sourceTree = "<group>"; };
-		672714A21CE9A017002A9233 /* FSProtocolProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSProtocolProcessor.h; sourceTree = "<group>"; };
-		672714A31CE9A017002A9233 /* FSProtocolProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSProtocolProcessor.m; sourceTree = "<group>"; };
-		672714A51CE9A04F002A9233 /* FSElementProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSElementProcessor.h; sourceTree = "<group>"; };
-		672714A61CE9A04F002A9233 /* FSElementProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSElementProcessor.m; sourceTree = "<group>"; };
-		672714A81CE9EE8C002A9233 /* FSSuggestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSuggestion.h; sourceTree = "<group>"; };
-		672714A91CE9EE8C002A9233 /* FSSuggestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSuggestion.m; sourceTree = "<group>"; };
-		672714AB1CE9F1AB002A9233 /* FSElementCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSElementCache.h; sourceTree = "<group>"; };
-		672714AC1CE9F1AB002A9233 /* FSElementCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSElementCache.m; sourceTree = "<group>"; };
-		672714AE1CE9F368002A9233 /* FSImpProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImpProcessor.h; sourceTree = "<group>"; };
-		672714AF1CE9F368002A9233 /* FSImpProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSImpProcessor.m; sourceTree = "<group>"; };
-		672714B71CEA19AD002A9233 /* FSSuggestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FSSuggestionView.xib; path = ../FSSuggestionView.xib; sourceTree = "<group>"; };
-		672715491CEACE8F002A9233 /* FSElementPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSElementPool.h; sourceTree = "<group>"; };
-		6727154A1CEACE8F002A9233 /* FSElementPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSElementPool.m; sourceTree = "<group>"; };
-		6727154D1CEAD9EB002A9233 /* FSTableView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FSTableView.txt; sourceTree = "<group>"; };
-		6727154E1CEAD9F6002A9233 /* FSTextView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FSTextView.txt; sourceTree = "<group>"; };
-		6727155A1CEAEF5A002A9233 /* FSSuggestionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSuggestionController.h; sourceTree = "<group>"; };
-		6727155B1CEAEF5A002A9233 /* FSSuggestionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSuggestionController.m; sourceTree = "<group>"; };
-		6727155E1CEAF00D002A9233 /* FSSuggestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSuggestionView.h; sourceTree = "<group>"; };
-		6727155F1CEAF00D002A9233 /* FSSuggestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSuggestionView.m; sourceTree = "<group>"; };
-		672715641CEB0BAF002A9233 /* FSSuggestionCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSuggestionCellModel.h; sourceTree = "<group>"; };
-		672715651CEB0BAF002A9233 /* FSSuggestionCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSuggestionCellModel.m; sourceTree = "<group>"; };
-		6769CFE81CEEDFC000B0AC20 /* FSSuggestionStubTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSuggestionStubTableView.h; sourceTree = "<group>"; };
-		6769CFE91CEEDFC000B0AC20 /* FSSuggestionStubTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSuggestionStubTableView.m; sourceTree = "<group>"; };
-		6769CFEB1CEEE0CF00B0AC20 /* FSConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSConst.h; sourceTree = "<group>"; };
-		676AD5191CEC5AEB00CC2500 /* FSSuggestionStubController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSuggestionStubController.h; sourceTree = "<group>"; };
-		676AD51A1CEC5AEB00CC2500 /* FSSuggestionStubController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSuggestionStubController.m; sourceTree = "<group>"; };
-		676AD51C1CEC5B3100CC2500 /* FSSuggestionStubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSuggestionStubView.h; sourceTree = "<group>"; };
-		676AD51D1CEC5B3100CC2500 /* FSSuggestionStubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSuggestionStubView.m; sourceTree = "<group>"; };
-		676AD51F1CEC5B4D00CC2500 /* FSSuggestionStubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSSuggestionStubView.xib; sourceTree = "<group>"; };
-		676AD5211CEC652200CC2500 /* FSStub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSStub.h; sourceTree = "<group>"; };
-		676AD5221CECA52300CC2500 /* FSExtensionProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSExtensionProcessor.h; sourceTree = "<group>"; };
-		676AD5231CECA52300CC2500 /* FSExtensionProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSExtensionProcessor.m; sourceTree = "<group>"; };
-		676AD5331CEDC35900CC2500 /* NSString+PDRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PDRegex.h"; sourceTree = "<group>"; };
-		676AD5341CEDC35900CC2500 /* NSString+PDRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PDRegex.m"; sourceTree = "<group>"; };
-		676AD5361CEEB05200CC2500 /* FSInterfaceProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSInterfaceProcessor.h; sourceTree = "<group>"; };
-		676AD5371CEEB05200CC2500 /* FSInterfaceProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSInterfaceProcessor.m; sourceTree = "<group>"; };
-		676E6A901CDDB8C8007F65B2 /* FastStub.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastStub.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		676E6A931CDDB8C9007F65B2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		676E6A951CDDB8C9007F65B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		676E6A991CDDB8C9007F65B2 /* FastStub.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = FastStub.xcscheme; path = FastStub.xcodeproj/xcshareddata/xcschemes/FastStub.xcscheme; sourceTree = SOURCE_ROOT; };
-		676E6A9B1CDDB8C9007F65B2 /* FastStub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastStub.h; sourceTree = "<group>"; };
-		676E6A9C1CDDB8C9007F65B2 /* FastStub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastStub.m; sourceTree = "<group>"; };
-		676E6A9E1CDDB8C9007F65B2 /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSObject_Extension.h; path = FastStub/NSObject_Extension.h; sourceTree = "<group>"; };
-		676E6A9F1CDDB8C9007F65B2 /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NSObject_Extension.m; path = FastStub/NSObject_Extension.m; sourceTree = "<group>"; };
-		676E6AA11CDDB8C9007F65B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67A4A6CA1CF3FE7D005334CD /* FSActionSheetDelegate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FSActionSheetDelegate.txt; sourceTree = "<group>"; };
-		67A4A6CC1CF3FF60005334CD /* FSAlertViewDelegate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FSAlertViewDelegate.txt; sourceTree = "<group>"; };
-		67DCA2DC1CE9610B00A54B7A /* DVTSourceTextStorage+Operations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DVTSourceTextStorage+Operations.h"; sourceTree = "<group>"; };
-		67DCA2DD1CE9610B00A54B7A /* DVTSourceTextStorage+Operations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DVTSourceTextStorage+Operations.m"; sourceTree = "<group>"; };
-		67DCA2DE1CE9610B00A54B7A /* NSArray+Operations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Operations.h"; sourceTree = "<group>"; };
-		67DCA2DF1CE9610B00A54B7A /* NSArray+Operations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Operations.m"; sourceTree = "<group>"; };
-		67DCA2E01CE9610B00A54B7A /* NSFileManager+Headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Headers.h"; sourceTree = "<group>"; };
-		67DCA2E11CE9610B00A54B7A /* NSFileManager+Headers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Headers.m"; sourceTree = "<group>"; };
-		67DCA2E21CE9610B00A54B7A /* NSMutableIndexSet+NSArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableIndexSet+NSArray.h"; sourceTree = "<group>"; };
-		67DCA2E31CE9610B00A54B7A /* NSMutableIndexSet+NSArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableIndexSet+NSArray.m"; sourceTree = "<group>"; };
-		67DCA2E41CE9610B00A54B7A /* NSObject+MHLogMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MHLogMethods.h"; sourceTree = "<group>"; };
-		67DCA2E51CE9610B00A54B7A /* NSObject+MHLogMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MHLogMethods.m"; sourceTree = "<group>"; };
-		67DCA2E61CE9610B00A54B7A /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
-		67DCA2E71CE9610B00A54B7A /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
-		67DCA2E81CE9610B00A54B7A /* NSString+Files.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Files.h"; sourceTree = "<group>"; };
-		67DCA2E91CE9610B00A54B7A /* NSString+Files.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Files.m"; sourceTree = "<group>"; };
-		67DCA2EA1CE9610B00A54B7A /* NSString+MHNSRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MHNSRange.h"; sourceTree = "<group>"; };
-		67DCA2EB1CE9610B00A54B7A /* NSString+MHNSRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MHNSRange.m"; sourceTree = "<group>"; };
-		67DCA2EC1CE9610B00A54B7A /* NSTextView+Operations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+Operations.h"; sourceTree = "<group>"; };
-		67DCA2ED1CE9610B00A54B7A /* NSTextView+Operations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+Operations.m"; sourceTree = "<group>"; };
-		67DCA2EE1CE9610B00A54B7A /* NSView+Dumping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Dumping.h"; sourceTree = "<group>"; };
-		67DCA2EF1CE9610B00A54B7A /* NSView+Dumping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+Dumping.m"; sourceTree = "<group>"; };
-		67DCA2F01CE9610B00A54B7A /* XCSourceFile+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCSourceFile+Path.h"; sourceTree = "<group>"; };
-		67DCA2F11CE9610B00A54B7A /* XCSourceFile+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCSourceFile+Path.m"; sourceTree = "<group>"; };
-		67DCA3021CE962AE00A54B7A /* MHXcodeDocumentNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHXcodeDocumentNavigator.h; sourceTree = "<group>"; };
-		67DCA3031CE962AE00A54B7A /* MHXcodeDocumentNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHXcodeDocumentNavigator.m; sourceTree = "<group>"; };
-		67DCA3041CE962AE00A54B7A /* XCFXcodePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFXcodePrivate.h; sourceTree = "<group>"; };
-		67DCA3071CE962AE00A54B7A /* NSString+XCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XCAdditions.h"; sourceTree = "<group>"; };
-		67DCA3081CE962AE00A54B7A /* NSString+XCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XCAdditions.m"; sourceTree = "<group>"; };
-		67DCA3091CE962AE00A54B7A /* XCProject+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCProject+Extensions.h"; sourceTree = "<group>"; };
-		67DCA30A1CE962AE00A54B7A /* XCProject+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCProject+Extensions.m"; sourceTree = "<group>"; };
-		67DCA30B1CE962AE00A54B7A /* XCTarget+XCProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTarget+XCProject.h"; sourceTree = "<group>"; };
-		67DCA30C1CE962AE00A54B7A /* XCTarget+XCProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTarget+XCProject.m"; sourceTree = "<group>"; };
-		67DCA30D1CE962AE00A54B7A /* XCBuildSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCBuildSettings.h; sourceTree = "<group>"; };
-		67DCA30E1CE962AE00A54B7A /* XCBuildSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCBuildSettings.m; sourceTree = "<group>"; };
-		67DCA30F1CE962AE00A54B7A /* XCWorkspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCWorkspace.h; sourceTree = "<group>"; };
-		67DCA3101CE962AE00A54B7A /* XCWorkspace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCWorkspace.m; sourceTree = "<group>"; };
-		67DCA3171CE962FB00A54B7A /* FastStub-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FastStub-Prefix.pch"; sourceTree = "<group>"; };
-		67DCA3181CE9638200A54B7A /* libXcodeEditor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libXcodeEditor.a; path = Pods/../build/Debug/libXcodeEditor.a; sourceTree = "<group>"; };
-		67DCA31A1CE9652400A54B7A /* FSIDESourceEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSIDESourceEditor.h; sourceTree = "<group>"; };
-		67DCA31B1CE9652400A54B7A /* FSIDESourceEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSIDESourceEditor.m; sourceTree = "<group>"; };
-		E67726A30CF09A3839F1A778 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		FDFCFA75F725F66B6332B8D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		676E6A8E1CDDB8C8007F65B2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				67DCA3191CE9638200A54B7A /* libXcodeEditor.a in Frameworks */,
-				676E6A941CDDB8C9007F65B2 /* AppKit.framework in Frameworks */,
-				676E6A961CDDB8C9007F65B2 /* Foundation.framework in Frameworks */,
-				10DB192B614EB53331FC58EC /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		6727149E1CE9A001002A9233 /* Processors */ = {
-			isa = PBXGroup;
-			children = (
-				672714A51CE9A04F002A9233 /* FSElementProcessor.h */,
-				672714A61CE9A04F002A9233 /* FSElementProcessor.m */,
-				676AD5361CEEB05200CC2500 /* FSInterfaceProcessor.h */,
-				676AD5371CEEB05200CC2500 /* FSInterfaceProcessor.m */,
-				672714A21CE9A017002A9233 /* FSProtocolProcessor.h */,
-				672714A31CE9A017002A9233 /* FSProtocolProcessor.m */,
-				672714AE1CE9F368002A9233 /* FSImpProcessor.h */,
-				672714AF1CE9F368002A9233 /* FSImpProcessor.m */,
-				676AD5221CECA52300CC2500 /* FSExtensionProcessor.h */,
-				676AD5231CECA52300CC2500 /* FSExtensionProcessor.m */,
-			);
-			path = Processors;
-			sourceTree = "<group>";
-		};
-		6727154C1CEAD9D0002A9233 /* CustomHeaders */ = {
-			isa = PBXGroup;
-			children = (
-				6727154D1CEAD9EB002A9233 /* FSTableView.txt */,
-				6727154E1CEAD9F6002A9233 /* FSTextView.txt */,
-				67009C731CF1793E00220AE3 /* FSScrollView.txt */,
-				676AD5211CEC652200CC2500 /* FSStub.h */,
-				67A4A6CA1CF3FE7D005334CD /* FSActionSheetDelegate.txt */,
-				67A4A6CC1CF3FF60005334CD /* FSAlertViewDelegate.txt */,
-			);
-			name = CustomHeaders;
-			path = SysHeaders;
-			sourceTree = "<group>";
-		};
-		672715591CEAEF4A002A9233 /* SuggestionController */ = {
-			isa = PBXGroup;
-			children = (
-				6727155A1CEAEF5A002A9233 /* FSSuggestionController.h */,
-				6727155B1CEAEF5A002A9233 /* FSSuggestionController.m */,
-				6727155E1CEAF00D002A9233 /* FSSuggestionView.h */,
-				6727155F1CEAF00D002A9233 /* FSSuggestionView.m */,
-				672715641CEB0BAF002A9233 /* FSSuggestionCellModel.h */,
-				672715651CEB0BAF002A9233 /* FSSuggestionCellModel.m */,
-				672714B71CEA19AD002A9233 /* FSSuggestionView.xib */,
-			);
-			path = SuggestionController;
-			sourceTree = "<group>";
-		};
-		6727155D1CEAEF92002A9233 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				672715491CEACE8F002A9233 /* FSElementPool.h */,
-				6727154A1CEACE8F002A9233 /* FSElementPool.m */,
-				672714AB1CE9F1AB002A9233 /* FSElementCache.h */,
-				672714AC1CE9F1AB002A9233 /* FSElementCache.m */,
-				672714A81CE9EE8C002A9233 /* FSSuggestion.h */,
-				672714A91CE9EE8C002A9233 /* FSSuggestion.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		676AD5181CEC5AC800CC2500 /* SuggestionStubController */ = {
-			isa = PBXGroup;
-			children = (
-				676AD5191CEC5AEB00CC2500 /* FSSuggestionStubController.h */,
-				676AD51A1CEC5AEB00CC2500 /* FSSuggestionStubController.m */,
-				676AD51C1CEC5B3100CC2500 /* FSSuggestionStubView.h */,
-				676AD51D1CEC5B3100CC2500 /* FSSuggestionStubView.m */,
-				6769CFE81CEEDFC000B0AC20 /* FSSuggestionStubTableView.h */,
-				6769CFE91CEEDFC000B0AC20 /* FSSuggestionStubTableView.m */,
-				676AD51F1CEC5B4D00CC2500 /* FSSuggestionStubView.xib */,
-			);
-			path = SuggestionStubController;
-			sourceTree = "<group>";
-		};
-		676AD5321CEDC35900CC2500 /* NSString+PDRegex */ = {
-			isa = PBXGroup;
-			children = (
-				676AD5331CEDC35900CC2500 /* NSString+PDRegex.h */,
-				676AD5341CEDC35900CC2500 /* NSString+PDRegex.m */,
-			);
-			path = "NSString+PDRegex";
-			sourceTree = "<group>";
-		};
-		676E6A871CDDB8C8007F65B2 = {
-			isa = PBXGroup;
-			children = (
-				676E6A971CDDB8C9007F65B2 /* FastStub */,
-				676E6A9E1CDDB8C9007F65B2 /* NSObject_Extension.h */,
-				676E6A9F1CDDB8C9007F65B2 /* NSObject_Extension.m */,
-				676E6A921CDDB8C9007F65B2 /* Frameworks */,
-				676E6A911CDDB8C9007F65B2 /* Products */,
-				CA444CCAD08B4DF366905375 /* Pods */,
-			);
-			sourceTree = "<group>";
-		};
-		676E6A911CDDB8C9007F65B2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				676E6A901CDDB8C8007F65B2 /* FastStub.xcplugin */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		676E6A921CDDB8C9007F65B2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				67DCA3181CE9638200A54B7A /* libXcodeEditor.a */,
-				676E6A931CDDB8C9007F65B2 /* AppKit.framework */,
-				676E6A951CDDB8C9007F65B2 /* Foundation.framework */,
-				FDFCFA75F725F66B6332B8D9 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		676E6A971CDDB8C9007F65B2 /* FastStub */ = {
-			isa = PBXGroup;
-			children = (
-				6727154C1CEAD9D0002A9233 /* CustomHeaders */,
-				6727149E1CE9A001002A9233 /* Processors */,
-				67DCA3001CE962AE00A54B7A /* External */,
-				67DCA2DB1CE9610B00A54B7A /* Categories */,
-				676E6A9B1CDDB8C9007F65B2 /* FastStub.h */,
-				676E6A9C1CDDB8C9007F65B2 /* FastStub.m */,
-				672714981CE9985A002A9233 /* FastStubInspector.h */,
-				672714991CE9985A002A9233 /* FastStubInspector.m */,
-				67DCA31A1CE9652400A54B7A /* FSIDESourceEditor.h */,
-				67DCA31B1CE9652400A54B7A /* FSIDESourceEditor.m */,
-				672714951CE996E7002A9233 /* FSIDENotificationHandler.h */,
-				672714961CE996E7002A9233 /* FSIDENotificationHandler.m */,
-				6727155D1CEAEF92002A9233 /* Model */,
-				672715591CEAEF4A002A9233 /* SuggestionController */,
-				676AD5181CEC5AC800CC2500 /* SuggestionStubController */,
-				676E6AA11CDDB8C9007F65B2 /* Info.plist */,
-				676E6A981CDDB8C9007F65B2 /* Supporting Files */,
-				6769CFEB1CEEE0CF00B0AC20 /* FSConst.h */,
-			);
-			path = FastStub;
-			sourceTree = "<group>";
-		};
-		676E6A981CDDB8C9007F65B2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				676E6A991CDDB8C9007F65B2 /* FastStub.xcscheme */,
-				67DCA3171CE962FB00A54B7A /* FastStub-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		67DCA2DB1CE9610B00A54B7A /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				676AD5321CEDC35900CC2500 /* NSString+PDRegex */,
-				67DCA2DC1CE9610B00A54B7A /* DVTSourceTextStorage+Operations.h */,
-				67DCA2DD1CE9610B00A54B7A /* DVTSourceTextStorage+Operations.m */,
-				67DCA2DE1CE9610B00A54B7A /* NSArray+Operations.h */,
-				67DCA2DF1CE9610B00A54B7A /* NSArray+Operations.m */,
-				67DCA2E01CE9610B00A54B7A /* NSFileManager+Headers.h */,
-				67DCA2E11CE9610B00A54B7A /* NSFileManager+Headers.m */,
-				67DCA2E21CE9610B00A54B7A /* NSMutableIndexSet+NSArray.h */,
-				67DCA2E31CE9610B00A54B7A /* NSMutableIndexSet+NSArray.m */,
-				67DCA2E41CE9610B00A54B7A /* NSObject+MHLogMethods.h */,
-				67DCA2E51CE9610B00A54B7A /* NSObject+MHLogMethods.m */,
-				67DCA2E61CE9610B00A54B7A /* NSString+Extensions.h */,
-				67DCA2E71CE9610B00A54B7A /* NSString+Extensions.m */,
-				67DCA2E81CE9610B00A54B7A /* NSString+Files.h */,
-				67DCA2E91CE9610B00A54B7A /* NSString+Files.m */,
-				67DCA2EA1CE9610B00A54B7A /* NSString+MHNSRange.h */,
-				67DCA2EB1CE9610B00A54B7A /* NSString+MHNSRange.m */,
-				67DCA2EC1CE9610B00A54B7A /* NSTextView+Operations.h */,
-				67DCA2ED1CE9610B00A54B7A /* NSTextView+Operations.m */,
-				67DCA2EE1CE9610B00A54B7A /* NSView+Dumping.h */,
-				67DCA2EF1CE9610B00A54B7A /* NSView+Dumping.m */,
-				67DCA2F01CE9610B00A54B7A /* XCSourceFile+Path.h */,
-				67DCA2F11CE9610B00A54B7A /* XCSourceFile+Path.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		67DCA3001CE962AE00A54B7A /* External */ = {
-			isa = PBXGroup;
-			children = (
-				67DCA3011CE962AE00A54B7A /* Benoit */,
-				67DCA3051CE962AE00A54B7A /* XcodeEditor */,
-			);
-			path = External;
-			sourceTree = "<group>";
-		};
-		67DCA3011CE962AE00A54B7A /* Benoit */ = {
-			isa = PBXGroup;
-			children = (
-				67DCA3021CE962AE00A54B7A /* MHXcodeDocumentNavigator.h */,
-				67DCA3031CE962AE00A54B7A /* MHXcodeDocumentNavigator.m */,
-				67DCA3041CE962AE00A54B7A /* XCFXcodePrivate.h */,
-			);
-			path = Benoit;
-			sourceTree = "<group>";
-		};
-		67DCA3051CE962AE00A54B7A /* XcodeEditor */ = {
-			isa = PBXGroup;
-			children = (
-				67DCA3061CE962AE00A54B7A /* Categories */,
-				67DCA30D1CE962AE00A54B7A /* XCBuildSettings.h */,
-				67DCA30E1CE962AE00A54B7A /* XCBuildSettings.m */,
-				67DCA30F1CE962AE00A54B7A /* XCWorkspace.h */,
-				67DCA3101CE962AE00A54B7A /* XCWorkspace.m */,
-			);
-			path = XcodeEditor;
-			sourceTree = "<group>";
-		};
-		67DCA3061CE962AE00A54B7A /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				67DCA3071CE962AE00A54B7A /* NSString+XCAdditions.h */,
-				67DCA3081CE962AE00A54B7A /* NSString+XCAdditions.m */,
-				67DCA3091CE962AE00A54B7A /* XCProject+Extensions.h */,
-				67DCA30A1CE962AE00A54B7A /* XCProject+Extensions.m */,
-				67DCA30B1CE962AE00A54B7A /* XCTarget+XCProject.h */,
-				67DCA30C1CE962AE00A54B7A /* XCTarget+XCProject.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		CA444CCAD08B4DF366905375 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3E7B236439DB4EBF4E853A80 /* Pods.debug.xcconfig */,
-				E67726A30CF09A3839F1A778 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		676E6A8F1CDDB8C8007F65B2 /* FastStub */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 676E6AA41CDDB8C9007F65B2 /* Build configuration list for PBXNativeTarget "FastStub" */;
+/* Begin PBXAggregateTarget section */
+		9666E4D5196BCB2B0076C1F2 /* FastStub */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9666E4D8196BCB2B0076C1F2 /* Build configuration list for PBXAggregateTarget "FastStub" */;
 			buildPhases = (
-				851CDA737C0323591C1FDC90 /* Check Pods Manifest.lock */,
-				676E6A8C1CDDB8C8007F65B2 /* Sources */,
-				676E6A8D1CDDB8C8007F65B2 /* Resources */,
-				676E6A8E1CDDB8C8007F65B2 /* Frameworks */,
-				2E4C71C86055866FD764E7A3 /* Copy Pods Resources */,
-			);
-			buildRules = (
+				9666E4D9196BCB4E0076C1F2 /* ShellScript */,
 			);
 			dependencies = (
 			);
 			name = FastStub;
-			productName = FastStub;
-			productReference = 676E6A901CDDB8C8007F65B2 /* FastStub.xcplugin */;
-			productType = "com.apple.product-type.bundle";
+			productName = "Auto-Importer";
 		};
-/* End PBXNativeTarget section */
+/* End PBXAggregateTarget section */
+
+/* Begin PBXGroup section */
+		9666E4CE196BCAB40076C1F2 = {
+			isa = PBXGroup;
+			children = (
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
 
 /* Begin PBXProject section */
-		676E6A881CDDB8C8007F65B2 /* Project object */ = {
+		9666E4CF196BCAB40076C1F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				KnownAssetTags = (
-					New,
-				);
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = music4kid;
-				TargetAttributes = {
-					676E6A8F1CDDB8C8007F65B2 = {
-						CreatedOnToolsVersion = 7.3;
-					};
-				};
+				LastUpgradeCheck = 0600;
 			};
-			buildConfigurationList = 676E6A8B1CDDB8C8007F65B2 /* Build configuration list for PBXProject "FastStub" */;
+			buildConfigurationList = 9666E4D2196BCAB40076C1F2 /* Build configuration list for PBXProject "FastStub" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 676E6A871CDDB8C8007F65B2;
-			productRefGroup = 676E6A911CDDB8C9007F65B2 /* Products */;
+			mainGroup = 9666E4CE196BCAB40076C1F2;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				676E6A8F1CDDB8C8007F65B2 /* FastStub */,
+				9666E4D5196BCB2B0076C1F2 /* FastStub */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		676E6A8D1CDDB8C8007F65B2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				672715541CEAE21A002A9233 /* FSTableView.txt in Resources */,
-				676AD5201CEC5B4D00CC2500 /* FSSuggestionStubView.xib in Resources */,
-				67A4A6CD1CF3FF60005334CD /* FSAlertViewDelegate.txt in Resources */,
-				67A4A6CB1CF3FE7D005334CD /* FSActionSheetDelegate.txt in Resources */,
-				672715551CEAE21A002A9233 /* FSTextView.txt in Resources */,
-				676E6A9A1CDDB8C9007F65B2 /* FastStub.xcscheme in Resources */,
-				672714B81CEA19AD002A9233 /* FSSuggestionView.xib in Resources */,
-				67009C741CF1793E00220AE3 /* FSScrollView.txt in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXShellScriptBuildPhase section */
-		2E4C71C86055866FD764E7A3 /* Copy Pods Resources */ = {
+		9666E4D9196BCB4E0076C1F2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		851CDA737C0323591C1FDC90 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
+			shellScript = "xcodebuild -workspace FastStub/FastStub.xcworkspace -scheme FastStub";
 		};
 /* End PBXShellScriptBuildPhase section */
 
-/* Begin PBXSourcesBuildPhase section */
-		676E6A8C1CDDB8C8007F65B2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6769CFEA1CEEDFC000B0AC20 /* FSSuggestionStubTableView.m in Sources */,
-				67DCA2F41CE9610B00A54B7A /* NSFileManager+Headers.m in Sources */,
-				67DCA2F91CE9610B00A54B7A /* NSString+MHNSRange.m in Sources */,
-				676E6A9D1CDDB8C9007F65B2 /* FastStub.m in Sources */,
-				67DCA2FA1CE9610B00A54B7A /* NSTextView+Operations.m in Sources */,
-				672714A71CE9A04F002A9233 /* FSElementProcessor.m in Sources */,
-				67DCA2F51CE9610B00A54B7A /* NSMutableIndexSet+NSArray.m in Sources */,
-				67DCA3151CE962AE00A54B7A /* XCBuildSettings.m in Sources */,
-				672715601CEAF00D002A9233 /* FSSuggestionView.m in Sources */,
-				6727154B1CEACE8F002A9233 /* FSElementPool.m in Sources */,
-				67DCA3161CE962AE00A54B7A /* XCWorkspace.m in Sources */,
-				67DCA2FC1CE9610B00A54B7A /* XCSourceFile+Path.m in Sources */,
-				676AD5351CEDC35900CC2500 /* NSString+PDRegex.m in Sources */,
-				67DCA2F71CE9610B00A54B7A /* NSString+Extensions.m in Sources */,
-				67DCA2FB1CE9610B00A54B7A /* NSView+Dumping.m in Sources */,
-				676AD5241CECA52300CC2500 /* FSExtensionProcessor.m in Sources */,
-				672714AA1CE9EE8C002A9233 /* FSSuggestion.m in Sources */,
-				676AD5381CEEB05200CC2500 /* FSInterfaceProcessor.m in Sources */,
-				67DCA3141CE962AE00A54B7A /* XCTarget+XCProject.m in Sources */,
-				67DCA31C1CE9652400A54B7A /* FSIDESourceEditor.m in Sources */,
-				672714AD1CE9F1AB002A9233 /* FSElementCache.m in Sources */,
-				672715661CEB0BAF002A9233 /* FSSuggestionCellModel.m in Sources */,
-				67DCA2F21CE9610B00A54B7A /* DVTSourceTextStorage+Operations.m in Sources */,
-				67DCA2F61CE9610B00A54B7A /* NSObject+MHLogMethods.m in Sources */,
-				676AD51B1CEC5AEB00CC2500 /* FSSuggestionStubController.m in Sources */,
-				67DCA2F81CE9610B00A54B7A /* NSString+Files.m in Sources */,
-				672714971CE996E7002A9233 /* FSIDENotificationHandler.m in Sources */,
-				676AD51E1CEC5B3100CC2500 /* FSSuggestionStubView.m in Sources */,
-				67DCA2F31CE9610B00A54B7A /* NSArray+Operations.m in Sources */,
-				6727149A1CE9985A002A9233 /* FastStubInspector.m in Sources */,
-				672714B01CE9F368002A9233 /* FSImpProcessor.m in Sources */,
-				6727155C1CEAEF5A002A9233 /* FSSuggestionController.m in Sources */,
-				676E6AA01CDDB8C9007F65B2 /* NSObject_Extension.m in Sources */,
-				67DCA3121CE962AE00A54B7A /* NSString+XCAdditions.m in Sources */,
-				672714A41CE9A017002A9233 /* FSProtocolProcessor.m in Sources */,
-				67DCA3111CE962AE00A54B7A /* MHXcodeDocumentNavigator.m in Sources */,
-				67DCA3131CE962AE00A54B7A /* XCProject+Extensions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
 /* Begin XCBuildConfiguration section */
-		676E6AA21CDDB8C9007F65B2 /* Debug */ = {
+		9666E4D3196BCAB40076C1F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
-		676E6AA31CDDB8C9007F65B2 /* Release */ = {
+		9666E4D4196BCAB40076C1F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
 			};
 			name = Release;
 		};
-		676E6AA51CDDB8C9007F65B2 /* Debug */ = {
+		9666E4D6196BCB2B0076C1F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E7B236439DB4EBF4E853A80 /* Pods.debug.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = "$(HOME)";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FastStub/FastStub-Prefix.pch";
-				INFOPLIST_FILE = FastStub/Info.plist;
-				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.FastStub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Debug;
 		};
-		676E6AA61CDDB8C9007F65B2 /* Release */ = {
+		9666E4D7196BCB2B0076C1F2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E67726A30CF09A3839F1A778 /* Pods.release.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = "$(HOME)";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FastStub/FastStub-Prefix.pch";
-				INFOPLIST_FILE = FastStub/Info.plist;
-				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.music4kid.FastStub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		676E6A8B1CDDB8C8007F65B2 /* Build configuration list for PBXProject "FastStub" */ = {
+		9666E4D2196BCAB40076C1F2 /* Build configuration list for PBXProject "FastStub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				676E6AA21CDDB8C9007F65B2 /* Debug */,
-				676E6AA31CDDB8C9007F65B2 /* Release */,
+				9666E4D3196BCAB40076C1F2 /* Debug */,
+				9666E4D4196BCAB40076C1F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		676E6AA41CDDB8C9007F65B2 /* Build configuration list for PBXNativeTarget "FastStub" */ = {
+		9666E4D8196BCB2B0076C1F2 /* Build configuration list for PBXAggregateTarget "FastStub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				676E6AA51CDDB8C9007F65B2 /* Debug */,
-				676E6AA61CDDB8C9007F65B2 /* Release */,
+				9666E4D6196BCB2B0076C1F2 /* Debug */,
+				9666E4D7196BCB2B0076C1F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 676E6A881CDDB8C8007F65B2 /* Project object */;
+	rootObject = 9666E4CF196BCAB40076C1F2 /* Project object */;
 }
