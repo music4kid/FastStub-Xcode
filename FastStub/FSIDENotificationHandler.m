@@ -69,10 +69,10 @@
     if (parseMap == nil) {
         parseMap = @{}.mutableCopy;
     }
-    if ([parseMap objectForKey:filePath]) {
-        return;
-    }
-    [parseMap setObject:filePath forKey:filePath];
+//    if ([parseMap objectForKey:filePath]) {
+//        return;
+//    }
+//    [parseMap setObject:filePath forKey:filePath];
     
     if (filePath) {
         [[FastStubInspector sharedInstance] updateProject:filePath completeBlock:nil];
