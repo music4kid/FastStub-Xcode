@@ -7,6 +7,8 @@
 //
 
 #import "FSSuggestion.h"
+#import <Cocoa/Cocoa.h>
+#import <AppKit/AppKit.h>
 
 @interface FSSuggestion () <NSTableViewDelegate>
 @property (nonatomic, strong) NSDictionary*              generalStubMap;

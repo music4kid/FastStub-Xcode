@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
+#import <AppKit/AppKit.h>
 
 typedef enum : NSUInteger {
     SuggestionControllerRoot,

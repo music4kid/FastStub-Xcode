@@ -5,6 +5,8 @@
 //  Created by Marko Hlebar on 11/05/2014.
 //  Copyright (c) 2014 Marko Hlebar. All rights reserved.
 //
+#import <Cocoa/Cocoa.h>
+#import <AppKit/AppKit.h>
 
 static NSString *const XCFrameworkExtension = @".framework";
 

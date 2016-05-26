@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>FastStub.xcscheme</key>
+		<key>FastStub.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>67AB58C21CF5F62E00FFA48E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>67AB58C71CF5F65E00FFA48E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9666E4D5196BCB2B0076C1F2</key>
+		<key>676E6A8F1CDDB8C8007F65B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
