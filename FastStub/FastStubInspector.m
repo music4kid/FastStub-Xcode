@@ -15,8 +15,11 @@
 #import "FSSuggestionController.h"
 #import "FSSuggestionCellModel.h"
 #import "FSStub.h"
+#import "FSPopTableViewController.h"
+#import "FSElementProperty.h"
+#import "FSTableViewModel.h"
 
-@interface FastStubInspector () <FSSuggestionControllerDelegate>
+@interface FastStubInspector () <FSSuggestionControllerDelegate, FSPopTableViewControllerDelegate>
 @property (nonatomic, strong) NSMapTable*                           projectsByWorkspace;
 @property (nonatomic, strong) FSIDESourceEditor*                    editor;
 @property (nonatomic, assign) BOOL                                  loading;
@@ -152,7 +155,6 @@
     FSSuggestion* s = [FSSuggestion new];
     
     NSMutableSet* srcMethodList = [NSMutableSet setWithSet:srcElement.methodList];
-//    [srcMethodList minusSet:impElement.methodList];
     
     NSMutableSet* allMethods = srcElement.methodList.mutableCopy;
     for (NSString* method in allMethods) {
@@ -276,8 +278,111 @@
         impElement = [_editor getCurrentElement];
         [_editor setSelectedRange:NSMakeRange(impElement.elementBeginRange.location-7, 0)];
     }
+    else if(stubKey.intValue == GeneralStubInitWith ||
+            stubKey.intValue == GeneralStubGetterSetter) {
+        NSMutableArray* properties = @[].mutableCopy;
+        
+        FSElementCache* hElement = [_editor getCurrentElementHeader];
+        
+        if (hElement.propertyList.count == 0) {
+            return;
+        }
+        
+        for (FSElementProperty* p in hElement.propertyList) {
+            FSTableViewModel* m = [FSTableViewModel new];
+            m.text = p.propertyName;
+            m.type = FSTableViewModelTypePropertyInit;
+            if (stubKey.intValue == GeneralStubGetterSetter) {
+                m.type = FSTableViewModelTypeGetterSetter;
+            }
+            m.customInfo = p;
+            [properties addObject:m];
+        }
+        
+        FSPopTableViewController* c =[FSPopTableViewController showPopWithinView:[_editor view] withItems:properties];
+        c.delegate = self;
+    }
     
     
+}
+
+- (void)onPopTableViewItemsSelected:(NSArray*)items {
+    if (items.count == 0) {
+        return;
+    }
+    
+    FSTableViewModel* m = items[0];
+    if (m.type == FSTableViewModelTypePropertyInit) {
+        [self createInitMethodWithItems:items];
+    }
+    else if (m.type == FSTableViewModelTypeGetterSetter) {
+        [self createGetterSetterWithItems:items];
+    }
+    
+}
+
+- (void)createInitMethodWithItems:(NSArray*)items;
+{
+    NSMutableString* initMethod = @"- (void)init".mutableCopy;
+    for (int i = 0; i < items.count; i ++) {
+        FSTableViewModel* m = items[i];
+        FSElementProperty* p = m.customInfo;
+        
+        NSString* nameStr = p.propertyName;
+        if (i == 0) {
+            nameStr = [p.propertyName stringByReplacingCharactersInRange:NSMakeRange(0,1)
+                                                              withString:[[p.propertyName substringToIndex:1] capitalizedString]];
+            [initMethod appendFormat:@"With%@", nameStr];
+        }
+        else
+        {
+            [initMethod appendFormat:@"%@", nameStr];
+        }
+        
+        [initMethod appendFormat:@":(%@)%@ ", p.propertyType, p.propertyName];
+    }
+    [initMethod appendFormat:@"\n{\n"];
+    
+    for (int i = 0; i < items.count; i ++) {
+        FSTableViewModel* m = items[i];
+        FSElementProperty* p = m.customInfo;
+        
+        [initMethod appendFormat:@"\tself.%@ = %@;\n", p.propertyName, p.propertyName];
+    }
+    
+    
+    [initMethod appendFormat:@"}\n"];
+    
+    [_editor insertText:initMethod];
+}
+
+- (void)createGetterSetterWithItems:(NSArray*)items;
+{
+    FSElementCache* impElement = [_editor getCurrentElement];
+    for (int i = 0; i < items.count; i ++) {
+        FSTableViewModel* m = items[i];
+        FSElementProperty* p = m.customInfo;
+        
+        NSString* nameStr = p.propertyName;
+        NSString* upNameStr = [p.propertyName stringByReplacingCharactersInRange:NSMakeRange(0,1)
+                                                                      withString:[[p.propertyName substringToIndex:1] capitalizedString]];
+        
+        //insert @synthesize
+        NSRange contentRange = impElement.contentBeginRange;
+        contentRange.length = 0;
+        NSString* synStr = [NSString stringWithFormat:@"@synthesize %@ = _%@;\n", nameStr, nameStr];
+        [_editor insertText:synStr withRange:contentRange];
+        
+        //insert getter
+        NSMutableString* getter = @"".mutableCopy;
+        [getter appendFormat:@"- (%@)%@\n{\n\treturn _%@;\n}\n\n", p.propertyType, nameStr, nameStr];
+        [_editor insertText:getter];
+        
+        //insert setter
+        NSMutableString* setter = @"".mutableCopy;
+        [setter appendFormat:@"- (void)set%@:(%@)%@\n{\n\t_%@ = %@;\n}\n\n", upNameStr, p.propertyType, nameStr, nameStr, nameStr];
+        [_editor insertText:setter];
+    }
 }
 
 @end

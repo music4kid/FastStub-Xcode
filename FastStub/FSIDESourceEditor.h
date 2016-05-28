@@ -16,6 +16,7 @@
 - (void)showAboveCaret:(NSString *)text color:(NSColor *)color;
 
 - (FSElementCache*)getCurrentElement;
+- (FSElementCache*)getCurrentElementHeader;
 
 - (void)insertText:(NSString*)text;
 - (void)insertText:(NSString*)text withRange:(NSRange)range;

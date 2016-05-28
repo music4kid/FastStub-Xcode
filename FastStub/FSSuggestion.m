@@ -29,7 +29,9 @@
 {
     if (self.generalStubMap == nil) {
         self.generalStubMap = @{@(GeneralStubSingleton):@"singleton",
-                                @(GeneralStubExtension):@"interface-extension"};
+                                @(GeneralStubExtension):@"interface-extension",
+                                @(GeneralStubInitWith):@"initWith",
+                                @(GeneralStubGetterSetter):@"getter-setter"};
     }
     return _generalStubMap;
 }

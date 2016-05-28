@@ -12,6 +12,7 @@
 
 #import "FSElementProcessor.h"
 #import "NSString+PDRegex.h"
+#import "FSElementProperty.h"
 
 @implementation FSElementProcessor
 
@@ -38,43 +39,6 @@
 
 - (void)processContent:(NSString *)content resultBlock:(processorResultBlock)resultBlock {
     [self processContent:content withPatternStr:[self pattern] resultBlock:resultBlock];
-}
-
-- (NSMutableSet*)buildMethodList:(NSString*)content
-{
-    __block NSMutableSet* methods = [NSMutableSet new];
-    
-    //general method parser, may not be accurate
-//    [self processContent:content withPatternStr:MethodPattern resultBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-//        
-//        NSRange matchRange = [result rangeAtIndex:0];
-//        NSString *matchString = [content substringWithRange:matchRange];
-//        NSString *matchTrim = [matchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-//        if (matchTrim.length > 0) {
-//            [methods addObject:matchTrim];
-//        }
-//        
-//    }];
-    
-    //parse based on file type, better accuracy
-    NSArray* matchedMethods = nil;
-    
-    FSElementCacheType etype = [self getElementType];
-    NSString* regex = nil;
-    if(etype == FSElementCacheInterface || etype == FSElementCacheExtension || etype == FSElementCacheProtocol) {
-        regex = @"(?:^|\\r|\\n|\\r\\n)\\s*([-+])(.*?);";
-    }
-    else if(etype == FSElementCacheImp) {
-        regex = @"(?:^|\\r|\\n|\\r\\n)\\s*([-+])(.*?)\\{";
-    }
-    
-    matchedMethods = [content vv_stringsByExtractingGroupsUsingRegexPattern:regex caseInsensitive:false treatAsOneLine:true];
-    for (int i = 0; i < matchedMethods.count; i+=2) {
-        NSString* fullMethod = [NSString stringWithFormat:@"%@%@", matchedMethods[i], matchedMethods[i+1]];
-        [methods addObject:fullMethod];
-    }
-    
-    return methods;
 }
 
 - (void)processContent:(NSString *)content withPatternStr:(NSString*)pattern resultBlock:(processorResultBlock)resultBlock {
@@ -173,11 +137,91 @@
         }
         
         
+        //parse property list
+        if (element.elementType == FSElementCacheInterface) {
+            NSRange matchInterfaceRange = [match rangeAtIndex:rangeIndex];
+            if (matchInterfaceRange.location != NSNotFound) {
+                NSString* matchInterfaceString = [content substringWithRange:matchInterfaceRange];
+                element.propertyList = [self buildPropertyList:matchInterfaceString].mutableCopy;
+            }
+        }
+        
+        
         return element;
     }
     
     return nil;
 }
 
+
+- (NSMutableSet*)buildMethodList:(NSString*)content
+{
+    __block NSMutableSet* methods = [NSMutableSet new];
+    
+    //parse based on file type, better accuracy
+    NSArray* matchedMethods = nil;
+    
+    FSElementCacheType etype = [self getElementType];
+    NSString* regex = nil;
+    if(etype == FSElementCacheInterface || etype == FSElementCacheExtension || etype == FSElementCacheProtocol) {
+        regex = @"(?:^|\\r|\\n|\\r\\n)\\s*([-+])(.*?);";
+    }
+    else if(etype == FSElementCacheImp) {
+        regex = @"(?:^|\\r|\\n|\\r\\n)\\s*([-+])(.*?)\\{";
+    }
+    
+    matchedMethods = [content vv_stringsByExtractingGroupsUsingRegexPattern:regex caseInsensitive:false treatAsOneLine:true];
+    for (int i = 0; i < matchedMethods.count; i+=2) {
+        NSString* fullMethod = [NSString stringWithFormat:@"%@%@", matchedMethods[i], matchedMethods[i+1]];
+        [methods addObject:fullMethod];
+    }
+    
+    return methods;
+}
+
+- (NSMutableSet*)buildPropertyList:(NSString*)content
+{
+    __block NSMutableSet* properties = [NSMutableSet new];
+    
+    //parse based on file type, better accuracy
+    NSArray* matchedProperties = nil;
+    
+    NSString* regex = @"(?:^|\\r|\\n|\\r\\n)\\s*(?:@property)\\s*(?:\\\([^\\(^\\).]*\\\))?(.*?);";
+    
+    matchedProperties = [content vv_stringsByExtractingGroupsUsingRegexPattern:regex caseInsensitive:false treatAsOneLine:true];
+    for (int i = 0; i < matchedProperties.count; i++) {
+        NSString* propertyStr = [NSString stringWithFormat:@"%@", matchedProperties[i]];
+        NSString* propertyStrTrim = [propertyStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        FSElementProperty* p = [FSElementProperty new];
+        if ([propertyStr rangeOfString:@"*"].location != NSNotFound) {
+            propertyStrTrim = [propertyStrTrim stringByReplacingOccurrencesOfString:@"*" withString:@" "];
+            NSString* re = @"^(.*)\\s+(?=(\\S*+)$)";
+            NSArray* matches = [propertyStrTrim vv_stringsByExtractingGroupsUsingRegexPattern:re caseInsensitive:false treatAsOneLine:true];
+            if (matches.count == 2) {
+                NSString* typeStr = [matches[0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+                p.propertyType = [NSString stringWithFormat:@"%@ *", typeStr];
+                p.propertyName = [NSString stringWithFormat:@"%@", matches[1]];
+                p.propertyName = [p.propertyName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            }
+        }
+        else {
+            NSString* re = @"^(.*)\\s+(?=(\\S*+)$)";
+            NSArray* matches = [propertyStrTrim vv_stringsByExtractingGroupsUsingRegexPattern:re caseInsensitive:false treatAsOneLine:true];
+            if (matches.count == 2) {
+                NSString* typeStr = [matches[0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+                p.propertyType = [NSString stringWithFormat:@"%@ *", typeStr];
+                p.propertyName = [NSString stringWithFormat:@"%@", matches[1]];
+                p.propertyName = [p.propertyName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            }
+        }
+        
+        if (p.propertyType.length >0 && p.propertyName.length > 0) {
+            [properties addObject:p];
+        }
+    }
+    
+    return properties;
+}
 
 @end

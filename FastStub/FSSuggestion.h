@@ -19,6 +19,8 @@ typedef enum : NSUInteger {
 typedef enum : NSUInteger {
     GeneralStubSingleton = 0,
     GeneralStubExtension,
+    GeneralStubInitWith,
+    GeneralStubGetterSetter,
     GeneralStubCount
 } GeneralStubType;
 

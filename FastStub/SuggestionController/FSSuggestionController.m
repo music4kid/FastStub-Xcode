@@ -130,7 +130,12 @@
             model.cellType = FSSuggestionCellGeneralStub;
             
             NSDictionary* stubMap = s.getGeneralStubs;
-            for (NSNumber* key in stubMap.allKeys) {
+            NSArray* keys = stubMap.allKeys;
+            keys = [keys sortedArrayUsingComparator:^(id a, id b) {
+                return [a compare:b];
+            }];
+            
+            for (NSNumber* key in keys) {
                 FSSuggestionStub* stub = [FSSuggestionStub new];
                 stub.stubKey = key;
                 stub.cellText = stubMap[key];

@@ -52,6 +52,12 @@
 		679277911CF69ADE0001BF7C /* XCXibDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 679277811CF69ADE0001BF7C /* XCXibDefinition.m */; };
 		67A4A6CB1CF3FE7D005334CD /* FSActionSheetDelegate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 67A4A6CA1CF3FE7D005334CD /* FSActionSheetDelegate.txt */; };
 		67A4A6CD1CF3FF60005334CD /* FSAlertViewDelegate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 67A4A6CC1CF3FF60005334CD /* FSAlertViewDelegate.txt */; };
+		67A4A7521CF7EB1F00ECF483 /* FSPopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A4A7511CF7EB1F00ECF483 /* FSPopTableViewController.m */; };
+		67A4A7551CF7EBC100ECF483 /* FSPopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A4A7541CF7EBC100ECF483 /* FSPopTableView.m */; };
+		67A4A7581CF7ED6700ECF483 /* FSTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A4A7571CF7ED6700ECF483 /* FSTableViewModel.m */; };
+		67A4A75A1CF7F05F00ECF483 /* FSTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67A4A7591CF7F05F00ECF483 /* FSTableView.xib */; };
+		67A4A75D1CF7F28800ECF483 /* FSElementProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A4A75C1CF7F28800ECF483 /* FSElementProperty.m */; };
+		67A4A7601CF8207300ECF483 /* FSPopTableViewTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A4A75F1CF8207300ECF483 /* FSPopTableViewTable.m */; };
 		67DCA2F21CE9610B00A54B7A /* DVTSourceTextStorage+Operations.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2DD1CE9610B00A54B7A /* DVTSourceTextStorage+Operations.m */; };
 		67DCA2F31CE9610B00A54B7A /* NSArray+Operations.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2DF1CE9610B00A54B7A /* NSArray+Operations.m */; };
 		67DCA2F41CE9610B00A54B7A /* NSFileManager+Headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DCA2E11CE9610B00A54B7A /* NSFileManager+Headers.m */; };
@@ -123,7 +129,7 @@
 		676E6A9C1CDDB8C9007F65B2 /* FastStub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastStub.m; sourceTree = "<group>"; };
 		676E6A9E1CDDB8C9007F65B2 /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSObject_Extension.h; path = FastStub/NSObject_Extension.h; sourceTree = "<group>"; };
 		676E6A9F1CDDB8C9007F65B2 /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NSObject_Extension.m; path = FastStub/NSObject_Extension.m; sourceTree = "<group>"; };
-		676E6AA11CDDB8C9007F65B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		676E6AA11CDDB8C9007F65B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = FastStub/Info.plist; sourceTree = "<group>"; };
 		679277601CF69ADE0001BF7C /* XCKeyBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCKeyBuilder.h; sourceTree = "<group>"; };
 		679277611CF69ADE0001BF7C /* XCKeyBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCKeyBuilder.m; sourceTree = "<group>"; };
 		679277621CF69ADE0001BF7C /* XCAbstractDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCAbstractDefinition.h; sourceTree = "<group>"; };
@@ -160,6 +166,17 @@
 		679277811CF69ADE0001BF7C /* XCXibDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCXibDefinition.m; sourceTree = "<group>"; };
 		67A4A6CA1CF3FE7D005334CD /* FSActionSheetDelegate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FSActionSheetDelegate.txt; sourceTree = "<group>"; };
 		67A4A6CC1CF3FF60005334CD /* FSAlertViewDelegate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FSAlertViewDelegate.txt; sourceTree = "<group>"; };
+		67A4A7501CF7EB1F00ECF483 /* FSPopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPopTableViewController.h; sourceTree = "<group>"; };
+		67A4A7511CF7EB1F00ECF483 /* FSPopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPopTableViewController.m; sourceTree = "<group>"; };
+		67A4A7531CF7EBC100ECF483 /* FSPopTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPopTableView.h; sourceTree = "<group>"; };
+		67A4A7541CF7EBC100ECF483 /* FSPopTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPopTableView.m; sourceTree = "<group>"; };
+		67A4A7561CF7ED6700ECF483 /* FSTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTableViewModel.h; sourceTree = "<group>"; };
+		67A4A7571CF7ED6700ECF483 /* FSTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTableViewModel.m; sourceTree = "<group>"; };
+		67A4A7591CF7F05F00ECF483 /* FSTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSTableView.xib; sourceTree = "<group>"; };
+		67A4A75B1CF7F28800ECF483 /* FSElementProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSElementProperty.h; sourceTree = "<group>"; };
+		67A4A75C1CF7F28800ECF483 /* FSElementProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSElementProperty.m; sourceTree = "<group>"; };
+		67A4A75E1CF8207300ECF483 /* FSPopTableViewTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPopTableViewTable.h; sourceTree = "<group>"; };
+		67A4A75F1CF8207300ECF483 /* FSPopTableViewTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPopTableViewTable.m; sourceTree = "<group>"; };
 		67DCA2DC1CE9610B00A54B7A /* DVTSourceTextStorage+Operations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DVTSourceTextStorage+Operations.h"; sourceTree = "<group>"; };
 		67DCA2DD1CE9610B00A54B7A /* DVTSourceTextStorage+Operations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DVTSourceTextStorage+Operations.m"; sourceTree = "<group>"; };
 		67DCA2DE1CE9610B00A54B7A /* NSArray+Operations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Operations.h"; sourceTree = "<group>"; };
@@ -268,6 +285,8 @@
 				672714AC1CE9F1AB002A9233 /* FSElementCache.m */,
 				672714A81CE9EE8C002A9233 /* FSSuggestion.h */,
 				672714A91CE9EE8C002A9233 /* FSSuggestion.m */,
+				67A4A75B1CF7F28800ECF483 /* FSElementProperty.h */,
+				67A4A75C1CF7F28800ECF483 /* FSElementProperty.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -301,6 +320,7 @@
 				676E6A971CDDB8C9007F65B2 /* FastStub */,
 				676E6A9E1CDDB8C9007F65B2 /* NSObject_Extension.h */,
 				676E6A9F1CDDB8C9007F65B2 /* NSObject_Extension.m */,
+				676E6AA11CDDB8C9007F65B2 /* Info.plist */,
 				676E6A921CDDB8C9007F65B2 /* Frameworks */,
 				676E6A911CDDB8C9007F65B2 /* Products */,
 				CA444CCAD08B4DF366905375 /* Pods */,
@@ -342,7 +362,7 @@
 				6727155D1CEAEF92002A9233 /* Model */,
 				672715591CEAEF4A002A9233 /* SuggestionController */,
 				676AD5181CEC5AC800CC2500 /* SuggestionStubController */,
-				676E6AA11CDDB8C9007F65B2 /* Info.plist */,
+				67A4A74F1CF7EAE700ECF483 /* FSPopTableView */,
 				676E6A981CDDB8C9007F65B2 /* Supporting Files */,
 				6769CFEB1CEEE0CF00B0AC20 /* FSConst.h */,
 			);
@@ -405,6 +425,22 @@
 				679277611CF69ADE0001BF7C /* XCKeyBuilder.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		67A4A74F1CF7EAE700ECF483 /* FSPopTableView */ = {
+			isa = PBXGroup;
+			children = (
+				67A4A7591CF7F05F00ECF483 /* FSTableView.xib */,
+				67A4A7501CF7EB1F00ECF483 /* FSPopTableViewController.h */,
+				67A4A7511CF7EB1F00ECF483 /* FSPopTableViewController.m */,
+				67A4A7531CF7EBC100ECF483 /* FSPopTableView.h */,
+				67A4A7541CF7EBC100ECF483 /* FSPopTableView.m */,
+				67A4A75E1CF8207300ECF483 /* FSPopTableViewTable.h */,
+				67A4A75F1CF8207300ECF483 /* FSPopTableViewTable.m */,
+				67A4A7561CF7ED6700ECF483 /* FSTableViewModel.h */,
+				67A4A7571CF7ED6700ECF483 /* FSTableViewModel.m */,
+			);
+			path = FSPopTableView;
 			sourceTree = "<group>";
 		};
 		67DCA2DB1CE9610B00A54B7A /* Categories */ = {
@@ -559,6 +595,7 @@
 				672715551CEAE21A002A9233 /* FSTextView.txt in Resources */,
 				676E6A9A1CDDB8C9007F65B2 /* FastStub.xcscheme in Resources */,
 				672714B81CEA19AD002A9233 /* FSSuggestionView.xib in Resources */,
+				67A4A75A1CF7F05F00ECF483 /* FSTableView.xib in Resources */,
 				67009C741CF1793E00220AE3 /* FSScrollView.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,16 +654,20 @@
 				67DCA3151CE962AE00A54B7A /* XCBuildSettings.m in Sources */,
 				672715601CEAF00D002A9233 /* FSSuggestionView.m in Sources */,
 				6727154B1CEACE8F002A9233 /* FSElementPool.m in Sources */,
+				67A4A75D1CF7F28800ECF483 /* FSElementProperty.m in Sources */,
 				67DCA3161CE962AE00A54B7A /* XCWorkspace.m in Sources */,
 				67DCA2FC1CE9610B00A54B7A /* XCSourceFile+Path.m in Sources */,
+				67A4A7551CF7EBC100ECF483 /* FSPopTableView.m in Sources */,
 				6792778A1CF69ADE0001BF7C /* XCProject+SubProject.m in Sources */,
 				679277831CF69ADE0001BF7C /* XCAbstractDefinition.m in Sources */,
+				67A4A7521CF7EB1F00ECF483 /* FSPopTableViewController.m in Sources */,
 				676AD5351CEDC35900CC2500 /* NSString+PDRegex.m in Sources */,
 				67DCA2F71CE9610B00A54B7A /* NSString+Extensions.m in Sources */,
 				67DCA2FB1CE9610B00A54B7A /* NSView+Dumping.m in Sources */,
 				676AD5241CECA52300CC2500 /* FSExtensionProcessor.m in Sources */,
 				672714AA1CE9EE8C002A9233 /* FSSuggestion.m in Sources */,
 				6792778B1CF69ADE0001BF7C /* XCProject.m in Sources */,
+				67A4A7581CF7ED6700ECF483 /* FSTableViewModel.m in Sources */,
 				679277901CF69ADE0001BF7C /* XCTarget.m in Sources */,
 				676AD5381CEEB05200CC2500 /* FSInterfaceProcessor.m in Sources */,
 				67DCA3141CE962AE00A54B7A /* XCTarget+XCProject.m in Sources */,
@@ -640,6 +681,7 @@
 				676AD51B1CEC5AEB00CC2500 /* FSSuggestionStubController.m in Sources */,
 				679277871CF69ADE0001BF7C /* XCGroup.m in Sources */,
 				67DCA2F81CE9610B00A54B7A /* NSString+Files.m in Sources */,
+				67A4A7601CF8207300ECF483 /* FSPopTableViewTable.m in Sources */,
 				672714971CE996E7002A9233 /* FSIDENotificationHandler.m in Sources */,
 				676AD51E1CEC5B3100CC2500 /* FSSuggestionStubView.m in Sources */,
 				67DCA2F31CE9610B00A54B7A /* NSArray+Operations.m in Sources */,

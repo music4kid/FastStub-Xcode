@@ -83,7 +83,7 @@
     NSArray *missingHeaderFullPaths = [self fullPathsForFiles:missingFiles inDirectory:projectDir];
     
     for (NSString *headerMissingFullpath in missingHeaderFullPaths) {
-        [self processHeaderPath:headerMissingFullpath];
+        [self processHeaderPath:headerMissingFullpath]; 
     }
     
     NSDate *methodFinish = [NSDate date];

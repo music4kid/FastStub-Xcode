@@ -1,5 +1,7 @@
 # FastStub-Xcode
 
+> Life is short, why waste it on meaningless typing?
+
 ### What is it?
 **A code generating feature borrowed from Android Studio.**
 
@@ -14,6 +16,14 @@ common protocols like UITableViewDelegate, UITableViewDataSource, UIScrollViewDe
 ### Superduper way to write singleton
 
 <img src="http://mrpeak.cn/images/fs_singleton.gif" width="920">
+
+### Embrace model with initWith:
+
+<img src="http://mrpeak.cn/images/fs_initwith.gif" width="920">
+
+### Sexy getter setter 
+
+<img src="http://mrpeak.cn/images/fs_getset.gif" width="920">
 
 ### Sweet on interface extension
 

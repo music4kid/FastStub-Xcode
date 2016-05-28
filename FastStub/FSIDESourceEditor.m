@@ -102,6 +102,46 @@
     return element;
 }
 
+- (FSElementCache*)getCurrentElementHeader {
+    FSElementCache* element = nil;
+    
+    NSString* currentFilePath = [MHXcodeDocumentNavigator currentFilePath];
+    NSString* currentHeaderPath = nil;
+    if ([currentFilePath rangeOfString:@".mm"].location != NSNotFound) {
+        currentHeaderPath = [currentFilePath stringByReplacingOccurrencesOfString:@".mm" withString:@".h"];
+    }
+    else if ([currentFilePath rangeOfString:@".m"].location != NSNotFound) {
+        currentHeaderPath = [currentFilePath stringByReplacingOccurrencesOfString:@".m" withString:@".h"];
+    }
+    if (currentHeaderPath.length == 0) {
+        return nil;
+    }
+    
+    NSError* error = nil;
+    NSString* content = [NSString stringWithContentsOfFile:currentHeaderPath encoding:NSUTF8StringEncoding error:&error];
+    if (error) {
+        return NO;
+    }
+    
+    FSElementCache* impElement = [self getCurrentElement];
+    if (impElement == nil) {
+        return nil;
+    }
+    
+    FSInterfaceProcessor* p = [FSInterfaceProcessor new];
+    NSArray* elementsInFile = [p createElements:content];
+    for (FSElementCache* e in elementsInFile) {
+        if ([e.elementName isEqualToString:impElement.elementName]) {
+            element = e;
+            break;
+        }
+    }
+ 
+    return element;
+}
+
+
+
 - (NSView *)view {
     return [MHXcodeDocumentNavigator currentSourceCodeTextView];
 }
