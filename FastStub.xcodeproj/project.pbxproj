@@ -50,6 +50,7 @@
 		6792778F1CF69ADE0001BF7C /* XCSubProjectDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6792777D1CF69ADE0001BF7C /* XCSubProjectDefinition.m */; };
 		679277901CF69ADE0001BF7C /* XCTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 6792777F1CF69ADE0001BF7C /* XCTarget.m */; };
 		679277911CF69ADE0001BF7C /* XCXibDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 679277811CF69ADE0001BF7C /* XCXibDefinition.m */; };
+		6795073E1CFD25C700C36BEC /* FSCategoryProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6795073D1CFD25C700C36BEC /* FSCategoryProcessor.m */; };
 		67A4A6CB1CF3FE7D005334CD /* FSActionSheetDelegate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 67A4A6CA1CF3FE7D005334CD /* FSActionSheetDelegate.txt */; };
 		67A4A6CD1CF3FF60005334CD /* FSAlertViewDelegate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 67A4A6CC1CF3FF60005334CD /* FSAlertViewDelegate.txt */; };
 		67A4A7521CF7EB1F00ECF483 /* FSPopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A4A7511CF7EB1F00ECF483 /* FSPopTableViewController.m */; };
@@ -164,6 +165,8 @@
 		6792777F1CF69ADE0001BF7C /* XCTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTarget.m; sourceTree = "<group>"; };
 		679277801CF69ADE0001BF7C /* XCXibDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCXibDefinition.h; sourceTree = "<group>"; };
 		679277811CF69ADE0001BF7C /* XCXibDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCXibDefinition.m; sourceTree = "<group>"; };
+		6795073C1CFD25C700C36BEC /* FSCategoryProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCategoryProcessor.h; sourceTree = "<group>"; };
+		6795073D1CFD25C700C36BEC /* FSCategoryProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCategoryProcessor.m; sourceTree = "<group>"; };
 		67A4A6CA1CF3FE7D005334CD /* FSActionSheetDelegate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FSActionSheetDelegate.txt; sourceTree = "<group>"; };
 		67A4A6CC1CF3FF60005334CD /* FSAlertViewDelegate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FSAlertViewDelegate.txt; sourceTree = "<group>"; };
 		67A4A7501CF7EB1F00ECF483 /* FSPopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPopTableViewController.h; sourceTree = "<group>"; };
@@ -244,6 +247,8 @@
 				672714AF1CE9F368002A9233 /* FSImpProcessor.m */,
 				676AD5221CECA52300CC2500 /* FSExtensionProcessor.h */,
 				676AD5231CECA52300CC2500 /* FSExtensionProcessor.m */,
+				6795073C1CFD25C700C36BEC /* FSCategoryProcessor.h */,
+				6795073D1CFD25C700C36BEC /* FSCategoryProcessor.m */,
 			);
 			path = Processors;
 			sourceTree = "<group>";
@@ -647,6 +652,7 @@
 				67DCA2F91CE9610B00A54B7A /* NSString+MHNSRange.m in Sources */,
 				676E6A9D1CDDB8C9007F65B2 /* FastStub.m in Sources */,
 				679277911CF69ADE0001BF7C /* XCXibDefinition.m in Sources */,
+				6795073E1CFD25C700C36BEC /* FSCategoryProcessor.m in Sources */,
 				67DCA2FA1CE9610B00A54B7A /* NSTextView+Operations.m in Sources */,
 				672714A71CE9A04F002A9233 /* FSElementProcessor.m in Sources */,
 				67DCA2F51CE9610B00A54B7A /* NSMutableIndexSet+NSArray.m in Sources */,

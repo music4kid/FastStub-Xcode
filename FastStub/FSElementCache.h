@@ -13,6 +13,7 @@ typedef enum : NSUInteger {
     FSElementCacheProtocol,
     FSElementCacheImp,
     FSElementCacheExtension,
+    FSElementCacheCategory,
 } FSElementCacheType;
 
 @interface FSElementCache : NSObject

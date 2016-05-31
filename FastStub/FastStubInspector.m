@@ -22,7 +22,6 @@
 @interface FastStubInspector () <FSSuggestionControllerDelegate, FSPopTableViewControllerDelegate>
 @property (nonatomic, strong) NSMapTable*                           projectsByWorkspace;
 @property (nonatomic, strong) FSIDESourceEditor*                    editor;
-@property (nonatomic, assign) BOOL                                  loading;
 @end
 
 
@@ -56,7 +55,7 @@
 
 - (void)detectShowSuggestion
 {
-    if (_loading) {
+    if ([self isStillLoading]) {
         NSString *text = [NSString stringWithFormat:@"indexing project files, please try later..."];
         NSColor *color = [NSColor colorWithRed:0.7 green:0.8 blue:1.0 alpha:1.0];
         [_editor showAboveCaret:text color:color];
@@ -84,7 +83,7 @@
     [suggestions addObject:s];
     
     //compare with .h file
-    FSElementCache* hElement = [_Pool getElementFromCache:impElement.elementName];
+    FSElementCache* hElement = [_editor getCurrentElementHeader];
     if (hElement == nil) {
         NSLog(@"missing .h file, may be a bug");
         return;
@@ -184,6 +183,7 @@
     [_Pool parseHeaderFile:headerPath];
 }
 
+static NSMutableDictionary* projectMap = nil;
 - (void)updateProject:(NSString *)projectPath completeBlock:(dispatch_block_t)completeBlock {
     
     if(![[NSFileManager defaultManager] fileExistsAtPath:projectPath]) {
@@ -191,13 +191,37 @@
         return;
     }
     
-    _loading = true;
+    @synchronized (self) {
+        if (projectMap == nil) {
+            projectMap = @{}.mutableCopy;
+        }
+        
+        if ([projectMap objectForKey:projectPath] != nil) {
+            return;
+        }
+        
+        [projectMap setObject:projectPath forKey:projectPath];
+    }
+    
     [_Pool parseElementFromProjectFile:projectPath complete:^{
-        _loading = false;
+        
+        @synchronized (self) {
+            [projectMap removeObjectForKey:projectPath];
+        }
+        
         if (completeBlock) {
             completeBlock();
         }
     }];
+}
+
+- (BOOL)isStillLoading
+{
+    BOOL isLoading = false;
+    @synchronized (self) {
+        isLoading = projectMap.allKeys.count > 0;
+    }
+    return isLoading;
 }
 
 - (void)loadCustomElement

@@ -14,6 +14,7 @@
 #import "FSImpProcessor.h"
 #import "FSElementCache.h"
 #import "FSExtensionProcessor.h"
+#import "FSCategoryProcessor.h"
 
 @implementation FSIDESourceEditor
 
@@ -128,6 +129,7 @@
         return nil;
     }
     
+    //try interface
     FSInterfaceProcessor* p = [FSInterfaceProcessor new];
     NSArray* elementsInFile = [p createElements:content];
     for (FSElementCache* e in elementsInFile) {
@@ -136,6 +138,19 @@
             break;
         }
     }
+    
+    if (element == nil) {
+        //try category
+        FSCategoryProcessor* p = [FSCategoryProcessor new];
+        elementsInFile = [p createElements:content];
+        for (FSElementCache* e in elementsInFile) {
+            if ([e.elementName isEqualToString:impElement.elementName]) {
+                element = e;
+                break;
+            }
+        }
+    }
+    
  
     return element;
 }

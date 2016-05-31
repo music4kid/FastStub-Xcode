@@ -86,7 +86,10 @@
         
         //parse super class
         matchRange = [match rangeAtIndex:rangeIndex];
-        if (matchRange.location != NSNotFound && element.elementType != FSElementCacheImp && element.elementType != FSElementCacheExtension) {
+        if (matchRange.location != NSNotFound && element.elementType != FSElementCacheImp
+            && element.elementType != FSElementCacheExtension
+            && element.elementType != FSElementCacheCategory)
+        {
             matchString = [content substringWithRange:matchRange];
             matchTrim = [matchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             if (matchTrim.length > 0) {
@@ -98,7 +101,8 @@
         
         //parse protocols
         matchRange = [match rangeAtIndex:rangeIndex];
-        if (matchRange.location != NSNotFound) {
+        if (matchRange.location != NSNotFound && element.elementType != FSElementCacheCategory)
+        {
             matchString = [content substringWithRange:matchRange];
             
             NSString* newContent = [matchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -163,7 +167,11 @@
     
     FSElementCacheType etype = [self getElementType];
     NSString* regex = nil;
-    if(etype == FSElementCacheInterface || etype == FSElementCacheExtension || etype == FSElementCacheProtocol) {
+    if(etype == FSElementCacheInterface
+       || etype == FSElementCacheExtension
+       || etype == FSElementCacheProtocol
+       || etype == FSElementCacheCategory)
+    {
         regex = @"(?:^|\\r|\\n|\\r\\n)\\s*([-+])(.*?);";
     }
     else if(etype == FSElementCacheImp) {
