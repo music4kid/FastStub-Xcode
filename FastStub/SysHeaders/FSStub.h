@@ -16,7 +16,7 @@
 \n\
     static dispatch_once_t onceToken;\n\
     dispatch_once(&onceToken, ^{\n\
-        instance = [FSPlaceHolder new];\n\
+        instance = [self new];\n\
     });\n\
 \n\
     return instance;\n\
