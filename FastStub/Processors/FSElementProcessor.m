@@ -218,7 +218,13 @@
             NSArray* matches = [propertyStrTrim vv_stringsByExtractingGroupsUsingRegexPattern:re caseInsensitive:false treatAsOneLine:true];
             if (matches.count == 2) {
                 NSString* typeStr = [matches[0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-                p.propertyType = [NSString stringWithFormat:@"%@ *", typeStr];
+                
+                NSArray *structTypes = @[@"CGRect", @"CGSize", @"CGPoint", @"CGFloat"];
+                if ([structTypes containsObject:typeStr]) {
+                    p.propertyType = [NSString stringWithFormat:@"%@", typeStr];
+                } else {
+                    p.propertyType = [NSString stringWithFormat:@"%@ *", typeStr];
+                }
                 p.propertyName = [NSString stringWithFormat:@"%@", matches[1]];
                 p.propertyName = [p.propertyName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             }
