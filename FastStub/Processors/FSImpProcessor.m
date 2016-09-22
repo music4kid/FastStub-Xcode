@@ -29,6 +29,7 @@
     //parse based on file type, better accuracy
     NSArray* matchedMethods = nil;
     
+    //only support notification selector
     NSString* regex = regex = @"selector:@selector\\((.*?)\\)";
     
     matchedMethods = [content vv_stringsByExtractingGroupsUsingRegexPattern:regex caseInsensitive:false treatAsOneLine:true];
