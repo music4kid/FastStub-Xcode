@@ -15,6 +15,7 @@
     if (self) {
         self.superClasses = [NSMutableSet new];
         self.protocols = [NSMutableSet new];
+        self.selectorList = [NSMutableSet new];
     }
     return self;
 }

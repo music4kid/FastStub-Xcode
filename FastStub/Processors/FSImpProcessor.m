@@ -8,6 +8,7 @@
 
 #import "FSImpProcessor.h"
 #import "FSElementCache.h"
+#import "NSString+PDRegex.h"
 
 @implementation FSImpProcessor
 
@@ -19,5 +20,25 @@
 {
     return FSElementCacheImp;
 }
+
+- (NSMutableSet*)buildSelectorList:(NSString*)content
+{
+    NSMutableSet* selectors = [NSMutableSet new];
+    
+    
+    //parse based on file type, better accuracy
+    NSArray* matchedMethods = nil;
+    
+    NSString* regex = regex = @"selector:@selector\\((.*?)\\)";
+    
+    matchedMethods = [content vv_stringsByExtractingGroupsUsingRegexPattern:regex caseInsensitive:false treatAsOneLine:true];
+    for (int i = 0; i < matchedMethods.count; i++) {
+        NSString* selector = [NSString stringWithFormat:@"%@", matchedMethods[i]];
+        [selectors addObject:selector];
+    }
+    
+    return selectors;
+}
+
 
 @end

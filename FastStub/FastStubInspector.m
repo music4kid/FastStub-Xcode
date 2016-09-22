@@ -82,13 +82,20 @@
     s.title = @"[General]->[press enter]";
     [suggestions addObject:s];
     
-    //compare with .h file
     FSElementCache* hElement = [_editor getCurrentElementHeader];
     if (hElement == nil) {
         NSLog(@"missing .h file, may be a bug");
         return;
     }
     
+    //compare with .m to get missing selectors
+    s = [self buildMissingSelectors:impElement];
+    if (s.methodList.count > 0) {
+        [suggestions addObject:s];
+        s.stype = FSSuggestionSelector;
+    }
+    
+    //compare with .h file
     s = [self buildSuggestion:hElement withTargetElement:impElement];
     if (s.methodList.count > 0) {
         [suggestions addObject:s];
@@ -178,6 +185,37 @@
     return s;
 }
 
+- (FSSuggestion*)buildMissingSelectors:(FSElementCache*)impElement
+{
+    FSSuggestion* s = [FSSuggestion new];
+    
+    s.title = @"@selectors";
+    s.methodList = [NSMutableSet new];
+    
+    
+    NSMutableSet* allSelectors = impElement.selectorList.mutableCopy;
+    for (NSString* selector in allSelectors) {
+        NSString* trimedSelector = [selector stringByReplacingOccurrencesOfString:@" " withString:@""];
+        trimedSelector = [trimedSelector stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+        
+        BOOL implemented = false;
+        for (NSString* impMethod in impElement.methodList) {
+            NSString* trimedImpMethod = [impMethod stringByReplacingOccurrencesOfString:@" " withString:@""];
+            trimedImpMethod = [trimedImpMethod stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+            
+            if ([trimedImpMethod containsString:trimedSelector]) {
+                implemented = true;
+            }
+        }
+        
+        if (implemented == false) {
+            [s.methodList addObject:selector];
+        }
+    }
+    
+    return s;
+}
+
 - (void)updateHeader:(NSString *)headerPath
 {
     [_Pool parseHeaderFile:headerPath];
@@ -251,6 +289,12 @@ static NSMutableDictionary* projectMap = nil;
                     [_editor insertMethodImp:model.cellText];
                     isMethodImp = true;
                 }
+                
+                
+                if (model.cellType == FSSuggestionCellSelector) {
+                    [_editor insertNotificationSelectorImp:model.cellText];
+                    isMethodImp = true;
+                }
             }
             
             //for general stub
@@ -258,6 +302,7 @@ static NSMutableDictionary* projectMap = nil;
                 FSSuggestionStub* stub = item;
                 [self insertStubByKey:stub.stubKey];
             }
+
         }
         
         if (isMethodImp) {

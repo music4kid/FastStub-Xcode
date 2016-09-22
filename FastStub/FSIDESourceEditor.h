@@ -25,6 +25,7 @@
 - (void)setSelectedRange:(NSRange)range;
 - (void)offsetSelectedRange:(int)offset;
 - (void)insertMethodImp:(NSString*)method;
+- (void)insertNotificationSelectorImp:(NSString*)method;
 - (void)saveCodeChanges;
 
 - (NSView *)view;

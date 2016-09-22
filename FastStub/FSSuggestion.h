@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef enum : NSUInteger {
+    FSSuggestionSelector,
     FSSuggestionProtocol,
     FSSuggestionSuperClass,
     FSSuggestionHeader,

@@ -22,6 +22,8 @@ typedef void (^processorResultBlock)(NSTextCheckingResult *result, NSMatchingFla
 
 - (NSMutableSet*)buildMethodList:(NSString*)content;
 
+- (NSMutableSet*)buildSelectorList:(NSString*)content;
+
 - (void)processContent:(NSString *)content resultBlock:(processorResultBlock)resultBlock;
 
 - (void)processContent:(NSString *)content withPatternStr:(NSString*)pattern resultBlock:(processorResultBlock)resultBlock;

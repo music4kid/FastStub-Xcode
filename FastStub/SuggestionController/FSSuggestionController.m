@@ -156,6 +156,11 @@
         {
             model.cellType = FSSuggestionCellTitleSuperClass;
         }
+        else if(s.stype == FSSuggestionCellSelector)
+        {
+            model.cellType = FSSuggestionCellSelectorHeader;
+        }
+        
         
         [models addObject:model];
         
@@ -164,6 +169,11 @@
             model.cellText = method;
             model.cellType = FSSuggestionCellMethod;
             [models addObject:model];
+            
+            if(s.stype == FSSuggestionSelector)
+            {
+                model.cellType = FSSuggestionCellSelector;
+            }
         }
     }
     
@@ -211,6 +221,10 @@
     {
         text = [NSString stringWithFormat:@"[Protocol] %@", text];
     }
+    else if(model.cellType == FSSuggestionCellSelectorHeader)
+    {
+        text = [NSString stringWithFormat:@"%@", text];
+    }
     else
     {
         text = [NSString stringWithFormat:@"    %@", text];
@@ -232,7 +246,7 @@
     if (model.cellType == FSSuggestionCellGeneralStub) {
         [cell setTextColor:[NSColor colorWithRed:75.0/255 green:139.0/255 blue:221.0/255 alpha:1.0]];
     }
-    else if(model.cellType == FSSuggestionCellMethod)
+    else if(model.cellType == FSSuggestionCellMethod || model.cellType == FSSuggestionCellSelector)
     {
         [cell setTextColor:[NSColor colorWithWhite:6.0/255 alpha:1.0]];
     }
@@ -386,7 +400,9 @@
     }
     
     FSSuggestionCellModel* model = _filteredItems[index];
-    if (model.cellType == FSSuggestionCellMethod || model.cellType == FSSuggestionCellGeneralStub) {
+    if (model.cellType == FSSuggestionCellMethod
+        || model.cellType == FSSuggestionCellSelector
+        || model.cellType == FSSuggestionCellGeneralStub) {
         return true;
     }
     else
@@ -411,7 +427,9 @@
     if (curIndex < _filteredItems.count-1) {
         for (int i = curIndex+1; i <= _filteredItems.count-1; i ++) {
             FSSuggestionCellModel* model = _filteredItems[i];
-            if (model.cellType == FSSuggestionCellMethod || model.cellType == FSSuggestionCellGeneralStub) {
+            if (model.cellType == FSSuggestionCellMethod
+                || model.cellType == FSSuggestionCellSelector
+                || model.cellType == FSSuggestionCellGeneralStub) {
                 nextIndex = i;
                 break;
             }
@@ -426,7 +444,9 @@
     if (curIndex > 0) {
         for (int i = curIndex-1; i >= 0; i --) {
             FSSuggestionCellModel* model = _filteredItems[i];
-            if (model.cellType == FSSuggestionCellMethod || model.cellType == FSSuggestionCellGeneralStub) {
+            if (model.cellType == FSSuggestionCellMethod
+                || model.cellType == FSSuggestionCellSelector
+                || model.cellType == FSSuggestionCellGeneralStub) {
                 prevIndex = i;
                 break;
             }

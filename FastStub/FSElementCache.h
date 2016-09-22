@@ -21,6 +21,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) NSString*                         elementName;
 @property (nonatomic, strong) NSMutableSet*                     methodList;
 @property (nonatomic, strong) NSMutableSet*                     propertyList;
+@property (nonatomic, strong) NSMutableSet*                     selectorList;
+
 @property (nonatomic, assign) FSElementCacheType                elementType;
 @property (nonatomic, assign) NSRange                           contentRange;
 @property (nonatomic, assign) NSRange                           contentBeginRange;

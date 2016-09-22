@@ -138,6 +138,12 @@
             beginRange.location = matchInterfaceRange.location + beginRange.location + 1;
             beginRange.length = 0;
             element.contentBeginRange = beginRange;
+            
+            
+            //parse selector list
+            if (element.elementType == FSElementCacheImp) {
+                element.selectorList = [self buildSelectorList:matchInterfaceString].mutableCopy;
+            }
         }
         
         
@@ -157,6 +163,10 @@
     return nil;
 }
 
+- (NSMutableSet*)buildSelectorList:(NSString*)content
+{
+    return nil;
+}
 
 - (NSMutableSet*)buildMethodList:(NSString*)content
 {

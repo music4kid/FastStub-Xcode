@@ -13,6 +13,8 @@ typedef enum : NSUInteger {
     FSSuggestionCellTitleSuperClass,
     FSSuggestionCellTitleProtocol,
     FSSuggestionCellMethod,
+    FSSuggestionCellSelector,
+    FSSuggestionCellSelectorHeader,
     FSSuggestionCellGeneralStub
 } FSSuggestionCellType;
 

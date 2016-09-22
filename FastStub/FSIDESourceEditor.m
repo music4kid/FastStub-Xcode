@@ -185,6 +185,21 @@
     [textView insertText:methodImp replacementRange:range];
 }
 
+- (void)insertNotificationSelectorImp:(NSString*)method
+{
+    NSString* methodImp = [NSString stringWithFormat:@"- (void)%@ {\n\t\n}\n\n", method];
+    if ([method hasSuffix:@":"]) {
+        methodImp = [NSString stringWithFormat:@"- (void)%@(NSNotification*)notif {\n\t\n}\n\n", method];
+    }
+    
+    NSTextView *textView = [MHXcodeDocumentNavigator currentSourceCodeTextView];
+    NSRange range = textView.selectedRange;
+    
+    [textView insertText:methodImp replacementRange:range];
+}
+
+
+
 - (void)insertText:(NSString*)text
 {
     NSTextView *textView = [MHXcodeDocumentNavigator currentSourceCodeTextView];
