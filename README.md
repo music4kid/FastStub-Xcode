@@ -29,6 +29,10 @@ common protocols like UITableViewDelegate, UITableViewDataSource, UIScrollViewDe
 
 <img src="http://mrpeak.cn/images/fs_extension.gif" width="920">
 
+### Easy on selector generation
+
+<img src="http://mrpeak.cn/images/fs_selector.gif" width="858">
+
 ### How to use?
 
 press ctrl+cmd+k, you are ready to go.
