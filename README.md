@@ -45,3 +45,11 @@ plan B: clone this repo, build FastStub on your Mac.
 
 ### License
 MIT
+
+**☕️orz = International Coffee Begging Protocol = ICBP**
+
+<img src="http://mrpeak.cn/images/mypay.png" width="320">
+
+**欢迎关注公众号：**
+
+<img src="http://mrpeak.cn/images/qr.jpg" width="150">
